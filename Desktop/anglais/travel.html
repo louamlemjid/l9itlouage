@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            
+            text-align: center;
+           
+        }
+
+        h1 {
+            color: #0066cc;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            margin: auto;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px 0;
+            color: #333;
+        }
+
+        select, input {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 15px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #0066cc;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #005bb5;
+        }
+    </style>
+</head>
+<body>
+    <h1>Travel</h1>
+    <form>
+        <label for="villeDepart">La ville de départ est:</label>
+        <select name="villeDepart" id="villeDepart">
+            <option value="q1">Sfax</option>
+            <option value="q2">Monastir</option>
+            <option value="q3">Ariana</option>
+            <option value="q4">sousse</option>
+            <option value="q5">tunis</option>
+            <option value="q6">mahdia</option>
+            <option value="q7">medenine</option>
+            <option value="q8">nabeul</option>
+            <option value="q9">ben arous</option>
+            <option value="q10">bizerte</option>
+            <option value="q11">gabes</option>
+            <option value="q12">manouba</option>
+            <option value="q13">zaghouan</option>
+            <option value="q14">beja</option>
+            <option value="q15">tozeur</option>
+            <option value="q16">kairouan</option>
+            <option value="q17">kef</option>
+            <option value="q18">siliana</option>
+            <option value="q19">sidi bouzid</option>
+            <option value="q20">tatouine</option>
+            <option value="q21">kebili</option>
+            <option value="q22">gafsa</option>
+            <option value="q23">jendouba</option>
+            <option value="q24">kasserine</option>
+        </select>
+        <br><br>
+        <label for="villeArrivee">La ville d'arrivée est:</label>
+        <select name="villeArrivee" id="villeArrivee">
+            <option value="v1">Sfax</option>
+            <option value="v2">Monastir</option>
+            <option value="v3">Ariana</option>
+            <option value="v4">sousse</option>
+            <option value="v5">tunis</option>
+            <option value="v6">mahdia</option>
+            <option value="v7">medenine</option>
+            <option value="v8">nabeul</option>
+            <option value="v9">ben arous</option>
+            <option value="v10">bizerte</option>
+            <option value="v11">gabes</option>
+            <option value="v12">manouba</option>
+            <option value="v13">zaghouan</option>
+            <option value="v14">beja</option>
+            <option value="v15">tozeur</option>
+            <option value="v16">kairouan</option>
+            <option value="v17">kef</option>
+            <option value="v18">siliana</option>
+            <option value="v19">sidi bouzid</option>
+            <option value="v20">tatouine</option>
+            <option value="v21">kebili</option>
+            <option value="v22">gafsa</option>
+            <option value="v23">jendouba</option>
+            <option value="v24">kasserine</option>
+        </select>
+        <br><br>
+        <label for="Date">La date du voyage:</label>
+        <input type="date" id="Date" name="Date">
+        <br><br>
+        <input type="submit" value="Valider">
+    </form>
+</body>
+</html>

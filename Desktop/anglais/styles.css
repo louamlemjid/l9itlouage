@@ -1,0 +1,11 @@
+.container{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    text-align: center;
+}
+p{
+    font-size: 40px;
+    color: rgb(0, 162, 255);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

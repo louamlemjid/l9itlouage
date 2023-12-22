@@ -1,0 +1,11 @@
+.cover{
+  margin: auto;
+  width: 400px;
+  margin-top: 200px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  text-align: center;
+}
