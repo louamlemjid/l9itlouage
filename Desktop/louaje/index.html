@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>louage</title>
+</head>
+<body>
+
+    <main>
+        <aside class="left">
+            <div class="leftone"></div>
+            <div class="lefttwo"></div>
+            <div class="leftthree"></div>
+        </aside>
+        <section>
+            <div class="place mat">
+                <p class="dispo"></p>  
+                <p class="pl">places dispo</p> 
+            </div>
+            <div class="place mat1" ></div>
+            <div class="place seat  one vert" data-element="one"><p>فارغ</p></div>
+            <div class="place seat  two vert" data-element="two"><p>فارغ</p></div>
+            <div class="place seat  three vert " data-element="three"><p>فارغ</p></div>
+            <div class="place adr"><p>Arrivée:<span class="arrivee"> Tunis</span></p></div>
+            <div class="place seat  four vert" data-element="four"><p>فارغ</p></div> 
+            <div class="place seat  five vert" data-element="five"><p>فارغ</p></div>
+            <div class="place adr"><p>Depart:<span class="depart"> Kelibia</span></p></div>
+            <div class="place seat  six vert" data-element="six"><p>فارغ</p></div>
+            <div class="place seat seven  vert" data-element="seven"><p>فارغ</p></div>
+            <div class="place seat  eight vert" data-element="eight"><p>فارغ</p></div>
+            <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+            <script>
+                $(document).ready(function() {
+                $('.seat').on('click', function() {
+                    // Get the data attribute to identify the clicked element
+                    const clickedElement = $(this).data('element');
+
+                    // Send an AJAX request to the server
+                    $.ajax({
+                    type: 'POST',
+                    url: '/station',
+                    data: { clickedElement: clickedElement },
+                    success: function(response) {
+                        console.log(response);
+                    }
+                    });
+                });
+                });
+             </script>
+            <div class="place bla" >227 Tunis 8305</div>
+        </section>
+        <aside class="right">
+            <div class="rightone"></div>
+            <div class="righttwo"></div>
+            <div class="rightthree"></div>
+        </aside>
+    </main>
+    <script src="./index.js" type="text/javascript"></script>
+</body>
+</html>

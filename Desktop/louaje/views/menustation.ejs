@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/menustation.css">
+    <title>Menu Station</title>
+</head>
+<body >
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <img src="logo.svg" alt="a building" width="40" class="m-1">
+        <p class="navbar-brand m-auto">Louage</p>
+    </nav>
+    <br>
+    <div class="choices">
+        <form action="/qrCodeScan" class="m-auto"  type="submit">
+            
+            
+            <button type="submit" id="menuform" class="m-auto">
+                <img src="scan-qr-scanner.png" alt="" width="70" class="m-auto">
+                <label for="" class="m-auto fs-5">Entrée</label>
+                
+            </button>
+        </form>
+        <form action="/qrCodeScanSortie" class="m-auto" >
+            
+            <button type="submit" id="menuform" >
+                <img src="scan-qr-scanner.png" alt="" width="70" class="m-auto">
+                <label for="" class="m-auto fs-5">Sortie</label>
+                
+            </button>
+        </form>
+        <form action="/adminStation" class="m-auto">
+            
+            <button type="submit" id="menuform" >
+                <img src="destination.png" alt="" width="70" class="m-auto">
+                <label class="m-auto fs-5" >Ajouter</label>     
+            </button>
+        </form>
+    </div>
+    <br><br><br><br><br><br>
+    <footer>
+      <ul class="nav justify-content-center border-bottom border-top pb-3 mb-3">
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-light">Home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-light">Features</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-light">Pricing</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-light">FAQs</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-light">About</a></li>
+      </ul>
+      <p class="text-center fs-4 text-light">© 2023 LouajeExpress, Inc</p>
+  
+    </footer>
+</body>
+</html>

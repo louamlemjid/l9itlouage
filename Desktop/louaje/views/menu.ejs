@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/home.css">
+    <title>Menu</title>
+</head>
+<body>
+    <div class="nav">
+        <img src="logo.svg" alt="api logo" width="50px" style="margin: auto;">
+        <nav class="navbar">
+            <a href="">Page d'accueil</a>
+            <a href="">Documentation</a>
+            <a href="">Actualité</a>
+            <a href="">Iscription</a>
+        </nav>
+    </div>
+    <section class="forms">
+        <div class="passenger">
+            <h1 class="h1">Vous recherchez une louage </h1>
+            <form action="/signuppassenger" class="">
+                <label for="">S'inscrire</label>
+                <button type="submit" class=" btn btn-dark">Register</button>
+            </form>
+            <form action="/signInPassenger">
+                <label for="">S'identifier</label>
+                <button type="submit" class=" btn btn-light">Connecter</button>
+            </form>
+        </div>
+        <div class="station">
+            <h1 class="h1">Vous etes admin de station</h1>
+            <form action="/signupstation">
+                <label for="">S'identifier</label>
+                <button type="submit" class=" btn btn-dark">Register</button>
+            </form>
+            <form action="/signinstation">
+                <label for="">S'identifier</label>
+                <button type="submit" class=" btn btn-light">Connecter</button>
+            </form>
+        </div>
+        <div class="louage">
+            <h1 class="h1">Vous etes chauffeur louage</h1>
+            <form action="/signup">
+                <label for="">S'inscrire</label>
+                <button type="submit" class=" btn btn-dark">Register</button>
+            </form>
+            <form action="/login">
+                <label for="">S'identifier</label>
+                <button type="submit" class=" btn btn-light">Connecter</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

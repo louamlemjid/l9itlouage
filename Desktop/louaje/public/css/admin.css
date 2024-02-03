@@ -1,0 +1,10 @@
+#adminStation{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 450px;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    margin: auto;
+}

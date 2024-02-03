@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styling.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Itéraire</title>
+</head>
+<body>
+    <style>
+        body{
+            background-image: url("/road.jpeg");
+            background-position: center ;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <img src="logo.svg" alt="a building" width="50" class="m-1">
+        <p class="navbar-brand m-auto">LouageExpress</p>
+    </nav><br>
+    <h1 class="text-light fs-1">Itéraire</h1>
+    <form class="m-auto container group w-75" action="/station" method="post">
+        <div class="col-md-2 col-4 m-auto input-group">
+            <span class="input-group-text bg-transparent text-light">Departure</span>
+            <select class="form-select bg-transparent text-dark" name="city1" id="city1" required="">
+                <option value="">select a city</option>
+            </select>
+            <script>
+                // Sample list of Tunisian ProvincestunisianProvinces (you can replace this with a more complete list)
+                var tunisianProvinces = [
+                    'Agareb', 'Ajim', 'Akouda', 'Aousdja', 'Ar Rudayyif', 'Ariana', 'As Sars', 'Aïne Draham', 'Bekalta', 'Ben Arous', 'Ben Gardane', 'Beni Hassane', 'Beni Khalled', 'Beni Kheddache', 'Beni Khiar', 'Bennane', 'Bir Ali Ben Khalifa', 'Bir el Hafey', 'Bizerte', 'Bodeur', 'Borj Mejen Bel Abbès', 'Bou Arada', 'Bou Arkoub', 'Bou Merdès', 'Bou Salem', 'Béja', 'Carthage', 'Chebba', 'Chorbane', 'Dahmani', 'Dar Chabanne', 'Degache', 'Dehiba', 'Djebeniana', 'Djemmal', 'Douz', 'El Alia', 'El Aroussa', 'El Battan', 'El Guetar', 'El Hamma', 'El Haouaria', 'El Jem', 'El Kef', 'El Ksar', 'El Ksour', 'El Maamoura', 'El Maknassi', 'El Metline', 'El Mida', 'Enfida', 'Er Regueb', 'Es Somaa', 'Ez Zahra', 'Feriana', 'Fernana', 'Fouchana', 'Gabès', 'Gafour', 'Galaat el Andeless', 'Ghardimaou', 'Ghomrassen', 'Ghraiba', 'Goubellat', 'Grombalia', 'Haffouz', 'Hajeb el Aïoun', 'Hammam Sousse', 'Hammam el Rhezez', 'Hammam-Lif', 'Hammamet', 'Harqalah', 'Haïdra', 'Hencha', 'Houmt Souk', 'Jedeïda', 'Jemna', 'JendoubaGafsa', 'Jerissa', 'Jilma', 'KairouanMétouia', 'Kalaa Srira', 'Kasserine', 'Kebili', 'Kelaa Kebira','kelibia', 'Khledia', 'Khunays', 'Korba', 'Korbous', 'Ksar Hellal', 'Ksibet el Mediouni', 'Ksour Essaf', 'Kélibia', 'La Goulette', 'La Marsa', 'La Mornaghia', 'Le Bardo', 'Le Kram', 'Lemta', 'Mahdia', 'Mahires', 'Maktar', 'Manouba', 'Mareth', 'Mateur', 'Medenine', 'Medjez el Bab', 'Melloulèche', 'Mennzel Bou Zelfa', 'Menzel Abderhaman', 'Menzel Bourguiba', 'Menzel Heurr', 'Menzel Kamel', 'Menzel Temime', 'Mesdour', 'Messadine', 'Metlaoui', 'Mezzouna', 'Midoun', 'Moknine', 'Monastir', 'Moularès', 'Msaken', 'Mégrine', 'M’dhilla', 'Nabeul', 'Nefta', 'Nibbar', 'Ouardenine', 'Oued Lill', 'Ousseltia', 'Radès', 'Rass el Djebel', 'Rejiche', 'Remada', 'Rhar el Melah', 'Rhennouch', 'Rohia', 'Sakiet Sidi Youssef', 'Sakiet ed Daier', 'Sakiet ez Zit', 'Salakta', 'Sbeitla', 'Sbiba', 'Sbikha', 'Sejenane', 'Seïada', 'Sfax', 'Sidi Alouane', 'Sidi Ben Nour', 'Sidi Bou Ali', 'Sidi Bou Rouis', 'Sidi Bou Saïd', 'Sidi Bouzid', 'Sidi Tabet', 'Sidi el Hani', 'Siliana', 'Skhira', 'Soliman', 'Souassi', 'Sousse', 'Sukrah', 'Tabarka', 'Tabursuq', 'Tajerouine', 'Takelsa', 'Tataouine', 'Tazarka', 'Teboulba', 'Tebourba', 'Testour', 'Thala', 'Thelepte', 'Tinja', 'Tourki', 'Touza', 'Tozeur', 'Tunis', 'Wadhraf', 'Zaghouan', 'Zaouiat Djedidi', 'Zaouiet Kountech', 'Zaouiet Sousse', 'Zarat', 'Zarzis', 'Zriba-Village']
+        
+                var dropdown = document.getElementById("city1");
+                
+                for (var i = 0; i < tunisianProvinces.length; i++) {
+                    var provinceOption = document.createElement("option");
+                    provinceOption.value = tunisianProvinces[i].toLowerCase().replace(/\s+/g, '-'); // Convert to lowercase and replace spaces with hyphens
+                    provinceOption.textContent = tunisianProvinces[i];
+                    dropdown.appendChild(provinceOption);
+                }
+            </script>
+        </div>
+        <div class="col-md-2 col-4 m-auto input-group" id="cities">
+            <div class="col-md-2 col-4 m-auto input-group">
+                <span class="input-group-text bg-transparent text-light">Destination</span>
+                <select class="form-select bg-transparent text-dark" name="city" id="city" required="">
+                    <option value="">select a city</option>
+                </select>
+                
+            </div>
+
+            <script>
+                // Sample list of Tunisian ProvincestunisianProvinces (you can replace this with a more complete list)
+                var tunisianProvinces = [
+                    'Agareb', 'Ajim', 'Akouda', 'Aousdja', 'Ar Rudayyif', 'Ariana', 'As Sars', 'Aïne Draham', 'Bekalta', 'Ben Arous', 'Ben Gardane', 'Beni Hassane', 'Beni Khalled', 'Beni Kheddache', 'Beni Khiar', 'Bennane', 'Bir Ali Ben Khalifa', 'Bir el Hafey', 'Bizerte', 'Bodeur', 'Borj Mejen Bel Abbès', 'Bou Arada', 'Bou Arkoub', 'Bou Merdès', 'Bou Salem', 'Béja', 'Carthage', 'Chebba', 'Chorbane', 'Dahmani', 'Dar Chabanne', 'Degache', 'Dehiba', 'Djebeniana', 'Djemmal', 'Douz', 'El Alia', 'El Aroussa', 'El Battan', 'El Guetar', 'El Hamma', 'El Haouaria', 'El Jem', 'El Kef', 'El Ksar', 'El Ksour', 'El Maamoura', 'El Maknassi', 'El Metline', 'El Mida', 'Enfida', 'Er Regueb', 'Es Somaa', 'Ez Zahra', 'Feriana', 'Fernana', 'Fouchana', 'Gabès', 'Gafour', 'Galaat el Andeless', 'Ghardimaou', 'Ghomrassen', 'Ghraiba', 'Goubellat', 'Grombalia', 'Haffouz', 'Hajeb el Aïoun', 'Hammam Sousse', 'Hammam el Rhezez', 'Hammam-Lif', 'Hammamet', 'Harqalah', 'Haïdra', 'Hencha', 'Houmt Souk', 'Jedeïda', 'Jemna', 'JendoubaGafsa', 'Jerissa', 'Jilma', 'KairouanMétouia', 'Kalaa Srira', 'Kasserine', 'Kebili', 'Kelaa Kebira','kelibia', 'Khledia', 'Khunays', 'Korba', 'Korbous', 'Ksar Hellal', 'Ksibet el Mediouni', 'Ksour Essaf', 'Kélibia', 'La Goulette', 'La Marsa', 'La Mornaghia', 'Le Bardo', 'Le Kram', 'Lemta', 'Mahdia', 'Mahires', 'Maktar', 'Manouba', 'Mareth', 'Mateur', 'Medenine', 'Medjez el Bab', 'Melloulèche', 'Mennzel Bou Zelfa', 'Menzel Abderhaman', 'Menzel Bourguiba', 'Menzel Heurr', 'Menzel Kamel', 'Menzel Temime', 'Mesdour', 'Messadine', 'Metlaoui', 'Mezzouna', 'Midoun', 'Moknine', 'Monastir', 'Moularès', 'Msaken', 'Mégrine', 'M’dhilla', 'Nabeul', 'Nefta', 'Nibbar', 'Ouardenine', 'Oued Lill', 'Ousseltia', 'Radès', 'Rass el Djebel', 'Rejiche', 'Remada', 'Rhar el Melah', 'Rhennouch', 'Rohia', 'Sakiet Sidi Youssef', 'Sakiet ed Daier', 'Sakiet ez Zit', 'Salakta', 'Sbeitla', 'Sbiba', 'Sbikha', 'Sejenane', 'Seïada', 'Sfax', 'Sidi Alouane', 'Sidi Ben Nour', 'Sidi Bou Ali', 'Sidi Bou Rouis', 'Sidi Bou Saïd', 'Sidi Bouzid', 'Sidi Tabet', 'Sidi el Hani', 'Siliana', 'Skhira', 'Soliman', 'Souassi', 'Sousse', 'Sukrah', 'Tabarka', 'Tabursuq', 'Tajerouine', 'Takelsa', 'Tataouine', 'Tazarka', 'Teboulba', 'Tebourba', 'Testour', 'Thala', 'Thelepte', 'Tinja', 'Tourki', 'Touza', 'Tozeur', 'Tunis', 'Wadhraf', 'Zaghouan', 'Zaouiat Djedidi', 'Zaouiet Kountech', 'Zaouiet Sousse', 'Zarat', 'Zarzis', 'Zriba-Village']
+        
+                var dropdown = document.getElementById("city");
+
+            
+                for (var i = 0; i < tunisianProvinces.length; i++) {
+                    var provinceOption = document.createElement("option");
+                    provinceOption.value = tunisianProvinces[i].toLowerCase().replace(/\s+/g, '-'); // Convert to lowercase and replace spaces with hyphens
+                    provinceOption.textContent = tunisianProvinces[i];
+                    dropdown.appendChild(provinceOption);
+                }
+            </script>
+        </div>
+        <div class="input-group mb-3 ">
+            <span class="input-group-text bg-transparent text-light" id="inputGroup-sizing-default">How many person</span>
+            <input type="number" id="numberOfPassengers" name="numberOfPassengers" class="form-control bg-transparent text-light" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="1">
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="flexCheckChecked" id="flexCheckChecked" checked required>
+            <label class="form-check-label" for="flexCheckChecked" id="note">
+              *this app needs acess to your location to work 
+            </label>
+          </div>
+        <button class="btn btn-light col-md-4 m-auto w-25" type="submit">Search</button>
+        </form>
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> 
+        <script>
+            if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(showPosition);
+            } else { 
+                console.log("Geolocation is not supported by this browser.");
+            }
+        
+    
+            function showPosition(position) {
+                latitude= position.coords.latitude;
+                longitude= position.coords.longitude; 
+                $.ajax({
+                    type: 'POST',
+                    url: '/location',
+                    data: { 
+                        latitude:latitude,
+                        longitude:longitude
+                    },
+                    success: function(response) {
+                        console.log("the location is subited successfully to the post req");
+                    }
+                });
+                console.log('inside show',latitude,longitude) 
+            }
+         </script>
+    <br><br><br><br><br><br>
+    <footer>
+      <ul class="nav justify-content-center border-bottom border-top pb-3 mb-3">
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-light">Home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-light">Features</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-light">Pricing</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-light">FAQs</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-light">About</a></li>
+      </ul>
+      <p class="text-center fs-4 text-light">© 2023 LouajeExpress, Inc</p>
+  
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+body{
+    background-image: url('/pexels-piccinng-3052361.jpg');
+    background-position: 0px 40px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}   
+section{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(1fr,8);
+    width: 380px;
+    gap: 5px;
+    height: auto;
+    padding: 10px;
+    
+    
+}
+h1{
+    padding: 10px;
+    text-align: center;
+    margin: auto;
+    width: 50%;
+    color: rgb(36, 94, 253);
+    
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.seat{ 
+
+    direction: rtl;
+    width: 80px;
+    height: 40px;
+    text-align: center;
+}
+.place{
+    cursor: pointer;
+}
+
+
+span{
+    color: rgb(255, 255, 255);
+}
+
+
+.place.bla{
+    grid-column: span 3;
+    font-weight: 800;
+    padding: 5px;
+    box-shadow: 1px 0 5px 2px rgb(46, 44, 44);
+    
+    text-align: center;
+    margin: auto;
+    width: 130px;
+    
+}
+.rouge{
+    background: linear-gradient(45deg, rgb(250, 236, 236) 2%, rgba(7, 99, 236, 0.897) 3%);
+    color: white;
+    box-shadow: 1px 0 5px 1px rgb(146, 146, 146);
+    
+}
+.vert{
+    background: linear-gradient(45deg, rgb(255, 255, 255) 2%, rgb(86, 145, 123) 3%);
+    color: white;
+    box-shadow: 1px 0 5px 1px rgb(146, 146, 146);
+    
+}
+main{
+    display: flex;
+    gap: 2px;
+    margin: auto;
+    justify-content: center;
+    
+}
+.left,.right{
+    display: flex;
+    flex-direction: column;
+}
+
+.mat .pl,.dispo{
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+   
+}
+.place.mat{
+    width: 10%;
+    margin: auto;
+    box-shadow: 1px 0 5px 1px rgb(146, 146, 146);
+    color: rgb(59, 22, 194);
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.trip{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.274);
+    padding: 20px;
+    border-radius: 10px;
+}
+.inside{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns:1fr 1fr ;
+}
+.trip:hover{
+    cursor: pointer;
+    box-shadow: 1px 0 8px 6px rgb(255, 255, 255);
+    
+}
+.group{
+    border: none;
+}
+#cities{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+#container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    backdrop-filter: blur(8px);
+    
+    
+    border: solid 1px rgba(255, 255, 255, 0.233);
+    border-radius: 10px ;
+    transition-duration: 0.3s;
+}
+#container:hover{
+    backdrop-filter: blur(0px);
+    transition-duration: 0.3s;
+}
+.icon{
+    display: grid;
+    grid-template-columns: 70% 30%;
+    gap: 20px;
+    
+    
+}
+.icon:hover{
+    cursor: pointer;
+    
+}
+
+a{
+    text-decoration: none;
+}
+#note{
+    color: rgb(255, 255, 255);
+    font-size: 13px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+}

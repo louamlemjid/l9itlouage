@@ -1,0 +1,34 @@
+<!-- Index.html file -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet"
+		href="css/qrCodeScan.css">
+	<title>QR Code Scanner / Reader
+	</title>
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <img src="logo.svg" alt="a building" width="50" class="m-1">
+        <p class="navbar-brand m-auto">LouageExpress</p>
+    </nav><br>
+	<div class="container">
+		<h1>Scan QR Codes</h1>
+		<div class="section">
+			<div id="my-qr-reader">
+			</div>
+		</div>
+	</div>
+	<script
+		src="https://unpkg.com/html5-qrcode">
+	</script>
+	<script src="js/qrCodeScan.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</body>
+
+</html>
